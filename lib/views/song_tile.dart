@@ -57,19 +57,21 @@ class SongTile extends StatelessWidget {
                       Text(
                         song.trackName,
                         style: TextStyle(
-                            fontFamily: 'avenir', fontWeight: FontWeight.w800),
+                            fontFamily: 'avenir',
+                            fontWeight: FontWeight.w900,
+                            fontSize: 15),
                         overflow: TextOverflow.ellipsis,
                       ),
                       Text(
                         song.artistName,
                         style: TextStyle(
-                            fontFamily: 'avenir', fontWeight: FontWeight.w800),
+                            fontFamily: 'avenir', fontWeight: FontWeight.w600),
                         overflow: TextOverflow.ellipsis,
                       ),
                       Text(
                         song.country.toString(),
                         style: TextStyle(
-                            fontFamily: 'avenir', fontWeight: FontWeight.w800),
+                            fontFamily: 'avenir', fontWeight: FontWeight.w600),
                         overflow: TextOverflow.ellipsis,
                       ),
                     ],

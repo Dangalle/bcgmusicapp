@@ -8,14 +8,14 @@ class SongController extends GetxController {
 
   @override
   void onInit() {
-    fetchProducts();
+    fetchProducts("jackjohnson");
     super.onInit();
   }
 
-  void fetchProducts() async {
+  void fetchProducts(String artistName) async {
     try {
       isLoading(true);
-      var songs = await RemoteServices.fetchProducts();
+      var songs = await RemoteServices.fetchProducts(artistName);
       if (songs != null) {
         songList.value = songs.results;
       }
