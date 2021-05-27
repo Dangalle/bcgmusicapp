@@ -1,5 +1,8 @@
 import 'package:bcgmusicapp/models/song.dart';
 import 'package:flutter/material.dart';
+import 'package:audio_manager/audio_manager.dart';
+
+var audioManagerInstance = AudioManager.instance;
 
 class SongTile extends StatelessWidget {
   final Song song;
@@ -41,6 +44,13 @@ class SongTile extends StatelessWidget {
                   ),
                 );
               });
+
+          audioManagerInstance
+              .start(song.previewUrl, "song title",
+                  desc: "description", auto: true, cover: "cover URL")
+              .then((err) {
+            print(err);
+          });
         },
         child: Padding(
           padding: const EdgeInsets.all(8.0),
