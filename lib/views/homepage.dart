@@ -12,6 +12,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
+          Text("Search"),
           Expanded(
             child: Obx(() {
               if (songController.isLoading.value)

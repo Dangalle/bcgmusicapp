@@ -76,7 +76,7 @@ class SongTile extends StatelessWidget {
                   ),
                 ],
               ),
-              Icon(Icons.music_note),
+              Icon(Icons.signal_cellular_alt),
             ],
           ),
         ),
